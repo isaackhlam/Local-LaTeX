@@ -1,6 +1,7 @@
-# Local LaTeX environment
+# Local LaTeX environment for OUP
 
-This repo is to setup an environment to compile LaTeX on local machine quickly.
+This repo is to setup an environment to compile LaTeX on local machine quickly.  
+To compile OUP, edit `oup-authoring-template/oup-authoring-template.tex` and `oup-authoring-template/reference.bib`
 
 ## TeXLive distribution on host
 
@@ -30,7 +31,7 @@ let g:vimtex_view_method = 'zathura'
 
 Replace `zathura` with `zathura_simple` if using Wayland (See [PR #2639](https://github.com/lervag/vimtex/pull/2639) for details).
 
-Then everything should working fine. Edit the source file in `src/main.tex` and `\ll` in Vim, the compiled pdf will be in `build/`.
+Then everything should working fine. Edit the source file in `oup-authoring-template/oup-authoring-template.tex` and `\ll` in Vim, the compiled pdf will be in `build/`.
 
 ## TeXLive distribution in docker
 
@@ -42,5 +43,5 @@ docker-compose up -d
 bash script/watch.sh
 ```
 
-And then edit the `src/main.tex`, the script will automatically compile when the `src/main.tex` is updated and saved.  
+And then edit the `oup-authoring-template/oup-authoring-template.tex`, the script will automatically compile when the `oup-authoring-template/oup-authoring-template.tex` is updated and saved.  
 The intermediate files and final pdf will be inside `build/`
